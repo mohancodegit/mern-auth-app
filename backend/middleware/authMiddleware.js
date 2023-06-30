@@ -14,7 +14,7 @@ export const validationToken = asyncHandler(async (req, res, next) => {
     } catch (error) {
       console.error(error);
       res.status(401);
-      throw new Error("Not authorized, token failed");
+      throw new Error("Not authorized, invalid token");
     }
   } else {
     res.status(401);
